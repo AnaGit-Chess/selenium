@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on win32)" generated="20201111 12:12:13.699" rpa="false">
+<suite id="s1" name="Amazon" source="C:\development\first script\tests\Amazon.robot">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://sportico-qa.softtek.store/customer/account/login/referer/aHR0cHM6Ly9zcG9ydGljby1xYS5zb2Z0dGVrLnN0b3JlLw%2C%2C/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201111 12:12:15.257" level="INFO">Opening browser 'chrome' to base url 'https://sportico-qa.softtek.store/customer/account/login/referer/aHR0cHM6Ly9zcG9ydGljby1xYS5zb2Z0dGVrLnN0b3JlLw%2C%2C/'.</msg>
+<status status="PASS" starttime="20201111 12:12:15.256" endtime="20201111 12:12:27.201"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>SPORTICO</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:32.764" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:32.386" endtime="20201111 12:12:32.764"></status>
+</kw>
+<msg timestamp="20201111 12:12:32.815" level="FAIL">Text 'SPORTICO' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20201111 12:12:27.202" endtime="20201111 12:12:32.818"></status>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20201111 12:12:15.255" endtime="20201111 12:12:32.819" critical="yes">Text 'SPORTICO' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Agregar tercer producto">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id="search"]</arg>
+<arg>EG2000</arg>
+</arguments>
+<msg timestamp="20201111 12:12:32.822" level="INFO">Typing text 'EG2000' into text field 'xpath=//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20201111 12:12:32.822" endtime="20201111 12:12:32.979"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search_mini_form"]/div[2]/button</arg>
+</arguments>
+<msg timestamp="20201111 12:12:32.979" level="INFO">Clicking button 'xpath=//*[@id="search_mini_form"]/div[2]/button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:34.489" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:34.099" endtime="20201111 12:12:34.489"></status>
+</kw>
+<msg timestamp="20201111 12:12:34.629" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201111 12:12:32.979" endtime="20201111 12:12:34.629"></status>
+</kw>
+<status status="FAIL" starttime="20201111 12:12:32.821" endtime="20201111 12:12:34.629" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</status>
+</test>
+<test id="s1-t3" name="Agregar otro producto">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id="search"]</arg>
+<arg>3021296002</arg>
+</arguments>
+<msg timestamp="20201111 12:12:34.637" level="INFO">Typing text '3021296002' into text field 'xpath=//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20201111 12:12:34.637" endtime="20201111 12:12:34.752"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search_mini_form"]/div[2]/button</arg>
+</arguments>
+<msg timestamp="20201111 12:12:34.753" level="INFO">Clicking button 'xpath=//*[@id="search_mini_form"]/div[2]/button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:36.236" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:35.853" endtime="20201111 12:12:36.237"></status>
+</kw>
+<msg timestamp="20201111 12:12:36.239" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201111 12:12:34.753" endtime="20201111 12:12:36.239"></status>
+</kw>
+<status status="FAIL" starttime="20201111 12:12:34.635" endtime="20201111 12:12:36.240" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</status>
+</test>
+<test id="s1-t4" name="Agregar ultimo producto">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id="search"]</arg>
+<arg>CD5463600</arg>
+</arguments>
+<msg timestamp="20201111 12:12:36.243" level="INFO">Typing text 'CD5463600' into text field 'xpath=//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20201111 12:12:36.243" endtime="20201111 12:12:36.374"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search_mini_form"]/div[2]/button</arg>
+</arguments>
+<msg timestamp="20201111 12:12:36.375" level="INFO">Clicking button 'xpath=//*[@id="search_mini_form"]/div[2]/button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:37.911" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:37.513" endtime="20201111 12:12:37.911"></status>
+</kw>
+<msg timestamp="20201111 12:12:37.916" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201111 12:12:36.375" endtime="20201111 12:12:37.917"></status>
+</kw>
+<status status="FAIL" starttime="20201111 12:12:36.242" endtime="20201111 12:12:37.919" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="submit" title="Buscar" class="action search" aria-label="Search"&gt;...&lt;/button&gt; is not clickable at point (804, 101). Other element would receive the click: &lt;div class="container-fluid justify-content-center"&gt;...&lt;/div&gt;
+  (Session info: chrome=86.0.4240.75)
+</status>
+</test>
+<test id="s1-t5" name="Continue...">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Carrito de Compras']</arg>
+</arguments>
+<msg timestamp="20201111 12:12:37.924" level="INFO">Clicking element 'xpath=//a[text()='Carrito de Compras']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:38.346" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:37.964" endtime="20201111 12:12:38.346"></status>
+</kw>
+<msg timestamp="20201111 12:12:38.381" level="FAIL">Element with locator 'xpath=//a[text()='Carrito de Compras']' not found.</msg>
+<status status="FAIL" starttime="20201111 12:12:37.924" endtime="20201111 12:12:38.381"></status>
+</kw>
+<status status="FAIL" starttime="20201111 12:12:37.924" endtime="20201111 12:12:38.381" critical="yes">Element with locator 'xpath=//a[text()='Carrito de Compras']' not found.</status>
+</test>
+<test id="s1-t6" name="Pago en CheckOut con Tarjeta Master Card">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="softtek_payment"]</arg>
+</arguments>
+<msg timestamp="20201111 12:12:38.388" level="INFO">Clicking element 'xpath=//*[@id="softtek_payment"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201111 12:12:38.812" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201111 12:12:38.410" endtime="20201111 12:12:38.812"></status>
+</kw>
+<msg timestamp="20201111 12:12:38.814" level="FAIL">Element with locator 'xpath=//*[@id="softtek_payment"]' not found.</msg>
+<status status="FAIL" starttime="20201111 12:12:38.387" endtime="20201111 12:12:38.814"></status>
+</kw>
+<status status="FAIL" starttime="20201111 12:12:38.386" endtime="20201111 12:12:38.814" critical="yes">Element with locator 'xpath=//*[@id="softtek_payment"]' not found.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20201111 12:12:13.709" endtime="20201111 12:12:38.823"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6">Critical Tests</stat>
+<stat pass="0" fail="6">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="6" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
