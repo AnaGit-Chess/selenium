@@ -71,7 +71,6 @@ Pago en CheckOut con Tarjeta Master Card
     Sleep    5s
     Input Text     xpath=//*[@id="email"]    sb-a9471d3181991@personal.example.com
     Input Text    xpath=//*[@id="password"]   admin123
-    Input text      xpath=//*[@id="password"]   admin123
 
     Click Button    xpath=//button[@id='btnLogin']
     Sleep    15s
